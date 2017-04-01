@@ -12,10 +12,11 @@
   </head>
   <body>
     <p> CANVAS PAINT </p>
-    <button class="clear">CLEAR!</button>
-    <button class="canvasSize">Change canvas</button>
+    <button class="clear">Clear me</button>
+    <button class="canvasSize">Canvas size</button>
     <script>
       $("button.clear").on("click", function clearCanvas () {
+        $("div.hover").css("background", "");
         $("div").removeClass("hover");
       })
       $("button.canvasSize").on("click", function changeSize () {

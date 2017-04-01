@@ -1,19 +1,51 @@
+body {
+  font-size: 20px;
+  background: #f3f7c1;
+}
+
 p {
   text-align: center;
 }
+
+button {
+  font-size: 16px;
+  color: white;
+  height: 50px;
+  width: 120px;
+  margin: auto;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  margin: 10px auto;
+  left: 20%;
+  background: #027ab5;
+}
+
+button:hover {
+  color: #027ab5;
+  border: 1px solid #027ab5;
+  background: white;
+  transition-duration: 0.4s;
+}
 #canvas {
+  background: white;
   display: block;
   width: 960px;
   position: absolute;
   left: 10%;
+  border: 1px solid #000;
 }
 .canvas-div {
   width: 50px;
   height: 50px;
-  border: 1px solid #000;
   display: inline-block;
   float: left;
+  border: 0.5px dotted #6c6c6c;
+
 }
+
 .hover {
   background-color: #ee66ff;
 }
