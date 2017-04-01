@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>My JS task</title>
+    <script type="text/javascript" src="main.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script>
+      $(document).ready(function() {printDivs()})
+      $(document).ready(function() {togglOnHover()})
+    </script>
+
+  </head>
+  <body>
+    <p> CANVAS PAINT </p>
+    <button class="clear">CLEAR!</button>
+    <button class="canvasSize">Change canvas</button>
+    <script>
+      $("button.clear").on("click", function clearCanvas () {
+        $("div").removeClass("hover");
+      })
+      $("button.canvasSize").on("click", function changeSize () {
+        var canvasSize = 100;
+        while(canvasSize > 25)
+        {
+          canvasSize = prompt("Give the new size of Grid", "1-25");
+          if (canvasSize > 25) {
+            alert("Value is too big, please give smaller value!");
+          }
+        }
+        printDivs(canvasSize);
+        togglOnHover();
+      })
+    </script>
+    <div id="canvas">
+    </div>
+  </body>
+</html>
